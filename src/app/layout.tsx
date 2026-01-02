@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Michel Beyrouty - Personal Website",
+  title: "HUSTLE HOUSE",
   description:
-    "Welcome to Michel Beyrouty's personal website. Explore my projects, skills, and get in touch!",
+    "Hustle House was founded in 2020 in Sehaile-Keserwan. The gym is known for its friendly atmosphere, where we take care of every member, through science based programs and a daily care and follow up.",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: [
@@ -40,7 +40,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-brand-black text-foreground font-sans`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <main>{children}</main>
         <Footer />
       </body>

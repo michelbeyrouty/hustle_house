@@ -20,7 +20,7 @@ export default function ServicesSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
             EVERYTHING YOU
             <br />
-            <span className="text-brand-orange">NEED TO</span>
+            NEED TO
             <br />
             SUCCEED
           </h2>
@@ -32,7 +32,7 @@ export default function ServicesSection() {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES.map((service, index) => {
+          {SERVICES.map((service) => {
             const IconComponent = service.icon;
             return (
               <div

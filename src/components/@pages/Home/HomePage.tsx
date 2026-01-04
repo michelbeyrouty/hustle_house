@@ -7,8 +7,6 @@ export default function HomePage() {
       <CinematicBackground />
 
       <HeroSection />
-      <HeroSection />
-      <HeroSection />
     </div>
   );
 }

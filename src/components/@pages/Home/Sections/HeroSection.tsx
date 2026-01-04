@@ -1,12 +1,9 @@
 "use client";
 
-import CinematicBackground from '../../../@common/CinematicBackground';
 
 export default function HeroSection() {
   return (
     <div className="relative">
-      {/* Dynamic Background */}
-      <CinematicBackground />
 
       {/* Hero Content - Split Layout */}
       <div className="relative h-screen flex items-center px-6 md:px-12 lg:px-20">
@@ -43,10 +40,7 @@ export default function HeroSection() {
                 Join the Movement
               </button>
             </div>
-
-
           </div>
-
 
         </div>
       </div>

@@ -4,7 +4,6 @@
 export default function HeroSection() {
   return (
     <div className="relative">
-      {/* Screaming Man Background - Right Side Only */}
 
       {/* Hero Content - Split Layout */}
       <div className="relative h-screen flex items-center px-6 md:px-12 lg:px-20 z-10">

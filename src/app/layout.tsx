@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@common/NavBar";
+import Navbar from "@/components/@common/NavBar/NavBar";
 import Footer from "@common/Footer";
 import ClaritySetup from "@common/Script/Clarity";
 import "./globals.css";

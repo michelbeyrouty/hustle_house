@@ -13,4 +13,8 @@ export const NAV_LINKS: NavLink[] = [
     link: "/#team",
     title: "Team",
   },
+    {
+    link: "/#contact",
+    title: "Contact us",
+  },
 ];

@@ -58,7 +58,7 @@ export default function Navbar() {
       <div className="hidden md:block">
         <a
           href={NAV_LINKS[NAV_LINKS.length - 1].link}
-          className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#f77f36] transition-colors duration-300"
+          className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-brand-orange transition-colors duration-300"
           target={NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http") ? "_blank" : undefined}
           rel={NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http") ? "noopener noreferrer" : undefined}
         >
@@ -104,7 +104,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`block text-2xl font-medium transition-colors duration-300 py-3 px-6 rounded-lg text-center ${
                       index === NAV_LINKS.length - 1
-                        ? "text-[#f77f36] hover:text-orange-400"
+                        ? "text-brand-orange hover:text-brand-orange/80"
                         : "text-white/80 hover:text-white"
                     }`}
                     target={nav.link.startsWith("http") ? "_blank" : undefined}

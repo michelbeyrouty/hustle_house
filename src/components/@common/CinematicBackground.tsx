@@ -12,7 +12,7 @@ export default function CinematicBackground({ className = '' }: CinematicBackgro
         className="absolute bg-image"
         style={{
           inset: '-5%',
-          backgroundImage: 'url("/gym-interior.jpg")',
+          backgroundImage: 'url("/hero_background.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.8) contrast(1.1)',

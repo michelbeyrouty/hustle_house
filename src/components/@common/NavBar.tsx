@@ -24,8 +24,11 @@ const NavLink = ({ nav, className, onClick }: {
 // Logo SVG Component
 const HustleHouseLogo = () => (
   <div className="flex items-center space-x-3">
-
-    <span className="text-lg font-bold text-white tracking-tight">HUSTLE HOUSE</span>
+    <img
+      src="/hustle_house_logo_white.png"
+      alt="Hustle House Logo"
+      className="h-10 w-auto"
+    />
   </div>
 );
 

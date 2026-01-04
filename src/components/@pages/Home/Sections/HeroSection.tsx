@@ -4,9 +4,10 @@
 export default function HeroSection() {
   return (
     <div className="relative">
+      {/* Screaming Man Background - Right Side Only */}
 
       {/* Hero Content - Split Layout */}
-      <div className="relative h-screen flex items-center px-6 md:px-12 lg:px-20">
+      <div className="relative h-screen flex items-center px-6 md:px-12 lg:px-20 z-10">
         <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Content */}
@@ -30,16 +31,8 @@ export default function HeroSection() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-              Discover a gym that feels like a second home with personalized training,
-              expert coaching, and a community that moves with you — anywhere.
+              Discover a gym that feels like a second home. Your fitness journey starts here!
             </p>
-
-            {/* CTA Button */}
-            <div className="pt-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Join the Movement
-              </button>
-            </div>
           </div>
 
         </div>

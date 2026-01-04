@@ -13,8 +13,8 @@ export default function HeroSection() {
           <div className="text-white space-y-8">
             {/* Small tagline */}
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-px bg-orange-500"></div>
-              <span className="text-orange-500 font-medium text-sm uppercase tracking-wider">
+              <div className="w-8 h-px bg-brand-orange"></div>
+              <span className="text-brand-orange font-medium text-sm uppercase tracking-wider">
                 Discover Every Rep
               </span>
             </div>
@@ -23,7 +23,7 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
               FITNESS
               <br />
-              <span className="text-orange-500">THAT FITS</span>
+              <span className="text-brand-orange">THAT FITS</span>
               <br />
               YOUR LIFE
             </h1>

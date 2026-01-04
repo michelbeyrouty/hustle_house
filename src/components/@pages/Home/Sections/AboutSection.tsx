@@ -20,7 +20,7 @@ export default function AboutSection() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
               YOUR FITNESS
               <br />
-              <span className="text-brand-orange">JOURNEY</span>
+              <span className="text-white">JOURNEY</span>
               <br />
               STARTS HERE
             </h2>
@@ -32,7 +32,7 @@ export default function AboutSection() {
               </p>
 
               <p>
-                We're known for our <span className="text-white font-medium">friendly atmosphere</span>, where we take care of every member through <span className="text-brand-orange font-semibold">science-based programs</span> and daily care and follow-up.
+                We're known for our <span className="text-white font-medium">friendly atmosphere</span>, where we take care of every member through <span className="text-white font-semibold">science-based programs</span> and daily care and follow-up.
               </p>
 
               <p>
@@ -59,7 +59,7 @@ export default function AboutSection() {
             </div>
 
             <div className="text-center space-y-2">
-              <div className="text-4xl md:text-5xl font-black text-brand-orange">Family</div>
+              <div className="text-4xl md:text-5xl font-black text-white">Family</div>
               <div className="text-sm uppercase tracking-wider text-gray-400">Atmosphere</div>
             </div>
           </div>

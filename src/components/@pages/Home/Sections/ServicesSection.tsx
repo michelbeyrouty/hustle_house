@@ -37,16 +37,16 @@ export default function ServicesSection() {
             return (
               <div
                 key={service.title}
-                className="group bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-brand-orange/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="space-y-6">
                   {/* Icon */}
-                  <div className="w-16 h-16 bg-brand-orange/10 rounded-xl flex items-center justify-center group-hover:bg-brand-orange/20 transition-colors duration-300">
-                    <IconComponent className="w-8 h-8 text-brand-orange" />
+                  <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                    <IconComponent className="w-8 h-8 text-white group-hover:text-brand-orange" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white group-hover:text-brand-orange transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white">
                     {service.title}
                   </h3>
 
@@ -62,8 +62,8 @@ export default function ServicesSection() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-brand-orange/10 backdrop-blur-sm border border-brand-orange/20 rounded-full px-8 py-4">
-            <span className="text-brand-orange font-medium">
+          <div className="inline-flex items-center space-x-2 border border-white/20 rounded-full px-8 py-4">
+            <span className="text-white font-medium">
               Ready to start your journey?
             </span>
             <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>

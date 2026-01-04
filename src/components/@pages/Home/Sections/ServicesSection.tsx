@@ -60,16 +60,6 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 border border-white/20 rounded-full px-8 py-4">
-            <span className="text-white font-medium">
-              Ready to start your journey?
-            </span>
-            <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
-          </div>
-        </div>
-
       </div>
     </div>
   );

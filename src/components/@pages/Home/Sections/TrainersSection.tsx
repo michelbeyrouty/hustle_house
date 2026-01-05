@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionHeader from "@/components/@common/SectionHeader";
+import CinematicBackground from "@/components/@common/CinematicBackground";
 import { TRAINERS } from "@/constants";
 
 export default function TrainersSection() {
@@ -12,8 +13,16 @@ export default function TrainersSection() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
-      <div className="max-w-7xl mx-auto w-full">
+    <div className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
+      {/* Cinematic Background with motivational imagery */}
+      <CinematicBackground
+        imageUrl="/gym_interior_lifting.jpg"
+        brightness={0.5}
+        contrast={1.4}
+      />
+
+      {/* Content overlay */}
+      <div className="relative z-20 max-w-7xl mx-auto w-full">
         <SectionHeader
           tag="Meet Our Team"
           title={
@@ -164,16 +173,6 @@ export default function TrainersSection() {
                 ></div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 border border-white/20 rounded-full px-8 py-4">
-            <span className="text-white font-medium">
-              Ready to meet your perfect trainer?
-            </span>
-            <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
           </div>
         </div>
       </div>

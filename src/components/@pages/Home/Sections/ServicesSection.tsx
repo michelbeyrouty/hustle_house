@@ -2,11 +2,20 @@
 
 import { SERVICES } from "@/constants";
 import SectionHeader from "@/components/@common/SectionHeader";
+import CinematicBackground from "@/components/@common/CinematicBackground";
 
 export default function ServicesSection() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
-      <div className="max-w-7xl mx-auto w-full">
+    <div className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
+      {/* Cinematic Background with gym interior */}
+      <CinematicBackground
+        imageUrl="/test_1.jpg"
+        brightness={0.6}
+        contrast={1.3}
+      />
+
+      {/* Content overlay */}
+      <div className="relative z-20 max-w-7xl mx-auto w-full">
         <SectionHeader
           tag="Our Services"
           title={

@@ -2,22 +2,28 @@
 
 interface CinematicBackgroundProps {
   className?: string;
+  imageUrl?: string;
+  brightness?: number;
+  contrast?: number;
 }
 
 export default function CinematicBackground({
   className = "",
+  imageUrl = "/hero_background.png",
+  brightness = 0.8,
+  contrast = 1.1,
 }: CinematicBackgroundProps) {
   return (
-    <div className={`fixed inset-0 overflow-hidden -z-10 ${className}`}>
+    <div className={`absolute inset-0 overflow-hidden z-0 ${className}`}>
       {/* Main background image with slow zoom animation */}
       <div
         className="absolute bg-image"
         style={{
           inset: "-5%",
-          backgroundImage: 'url("/hero_background.png")',
+          backgroundImage: `url("${imageUrl}")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "brightness(0.8) contrast(1.1)",
+          filter: `brightness(${brightness}) contrast(${contrast})`,
           animation: "slowZoom 30s ease-in-out infinite",
         }}
       >

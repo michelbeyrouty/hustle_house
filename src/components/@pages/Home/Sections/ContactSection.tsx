@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 export default function ContactSection() {
   const handleMapClick = () => {
     // Try to open in Google Maps first, then fallback to Apple Maps
-    const location = "Sehaile, Keserwan, Lebanon";
+    const location = "XM34+XC Sehayleh, Lebanon";
     const encodedLocation = encodeURIComponent(location);
 
     // Google Maps URL
@@ -108,7 +108,7 @@ export default function ContactSection() {
                   <ExternalLink className="w-4 h-4 opacity-70" />
                 </h3>
                 <p className="text-gray-300 group-hover:text-brand-orange transition-colors duration-300 text-lg">
-                  Sehaile - Keserwan
+                  Sehayleh - Keserwan
                 </p>
                 <p className="text-sm text-gray-400 group-hover:text-brand-orange/70 transition-colors duration-300 mt-2">
                   Click to open in maps

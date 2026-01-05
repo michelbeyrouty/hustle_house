@@ -66,9 +66,9 @@ export default function Navbar() {
 
       {/* Desktop */}
 
-      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 bg-gray-50 rounded-full px-6 py-2 shadow-sm border border-gray-200">
+      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 bg-gray-50 rounded-full px-6 py-2 shadow-sm border border-gray-200 h-10">
         <ul
-          className="flex space-x-6 items-center relative"
+          className="flex space-x-6 items-center relative h-full"
           onMouseLeave={handleMouseLeave}
         >
           {/* Moving background */}
@@ -79,11 +79,11 @@ export default function Navbar() {
             style={backgroundStyle}
           />
           {NAV_LINKS.slice(0, -1).map((nav, index) => (
-            <li key={nav.link} className="flex-shrink-0">
+            <li key={nav.link} className="flex-shrink-0 h-full">
               <a
                 ref={(el) => (navRefs.current[index] = el)}
                 href={nav.link}
-                className="text-sm font-medium text-gray-600 hover:text-brand-orange transition-colors duration-300 px-3 py-2 rounded-full relative z-10 block"
+                className="text-sm font-medium text-gray-600 hover:text-brand-orange transition-colors duration-300 px-3 py-1 rounded-full relative z-10 flex items-center h-full"
                 target={nav.link.startsWith("http") ? "_blank" : undefined}
                 rel={
                   nav.link.startsWith("http")
@@ -100,8 +100,7 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:block">
-        <Button
-          variant="brand"
+        <a
           href={NAV_LINKS[NAV_LINKS.length - 1].link}
           target={
             NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http")
@@ -113,9 +112,10 @@ export default function Navbar() {
               ? "noopener noreferrer"
               : undefined
           }
+          className="inline-flex items-center bg-gray-800 hover:bg-brand-orange rounded-full px-6 py-2 text-sm font-medium text-white hover:text-white transition-all duration-300 shadow-sm border border-gray-600 hover:border-brand-orange"
         >
           {NAV_LINKS[NAV_LINKS.length - 1].title}
-        </Button>
+        </a>
       </div>
 
       {/* Mobile */}

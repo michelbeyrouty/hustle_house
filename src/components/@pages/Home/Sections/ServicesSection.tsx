@@ -4,18 +4,16 @@ import { SERVICES } from "@/constants";
 import SectionHeader from "@/components/@common/SectionHeader";
 
 export default function ServicesSection() {
-
   return (
     <div className="min-h-screen bg-gray-950 text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
       <div className="max-w-7xl mx-auto w-full">
-
         <SectionHeader
           tag="Our Services"
           title={
             <>
               EVERYTHING YOU
               <br />
-              <span >NEED TO</span>
+              <span>NEED TO</span>
               <br />
               SUCCEED
             </>
@@ -52,7 +50,6 @@ export default function ServicesSection() {
             );
           })}
         </div>
-
       </div>
     </div>
   );

@@ -1,76 +1,29 @@
 "use client";
 
-import { HiUser, HiUserGroup, HiHeart, HiAcademicCap, HiBeaker, HiClipboardList, HiSparkles } from "react-icons/hi";
+import { SERVICES } from "@/constants";
+import SectionHeader from "@/components/@common/SectionHeader";
 
 export default function Services() {
-  const services = [
-    {
-      icon: HiUser,
-      title: "Individualized Training Programs",
-      description: "Personalized workout plans tailored to your specific goals and fitness level."
-    },
-    {
-      icon: HiUserGroup,
-      title: "Group Training",
-      description: "Dynamic group sessions that combine motivation with effective workouts."
-    },
-    {
-      icon: HiHeart,
-      title: "Athlete Rehabilitation & Training",
-      description: "Specialized programs for athlete recovery and performance enhancement."
-    },
-    {
-      icon: HiAcademicCap,
-      title: "Classes",
-      description: "Structured fitness classes designed for all fitness levels and interests."
-    },
-    {
-      icon: HiBeaker,
-      title: "Physiotherapy",
-      description: "Professional physiotherapy services to help you recover and prevent injuries."
-    },
-    {
-      icon: HiClipboardList,
-      title: "Dietitian",
-      description: "Expert nutritional guidance to complement your fitness journey."
-    },
-    {
-      icon: HiSparkles,
-      title: "Pilates",
-      description: "Core-strengthening Pilates sessions for improved flexibility and balance."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-950 text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
       <div className="max-w-7xl mx-auto w-full">
-
-        {/* Section Header */}
-        <div className="text-center mb-16 space-y-6">
-          <div className="flex items-center justify-center space-x-2">
-            <div className="w-8 h-px bg-brand-orange"></div>
-            <span className="text-brand-orange font-medium text-sm uppercase tracking-wider">
-              Our Services
-            </span>
-            <div className="w-8 h-px bg-brand-orange"></div>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
-            EVERYTHING YOU
-            <br />
-            <span className="text-brand-orange">NEED TO</span>
-            <br />
-            SUCCEED
-          </h2>
-
-          <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            From personalized training to expert guidance, we provide comprehensive services to support your fitness journey.
-          </p>
-        </div>
+        <SectionHeader
+          tag="Our Services"
+          title={
+            <>
+              EVERYTHING YOU
+              <br />
+              <span>NEED TO</span>
+              <br />
+              SUCCEED
+            </>
+          }
+          description="From personalized training to expert guidance, we provide comprehensive services to support your fitness journey."
+        />
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
+          {SERVICES.map((service) => {
             const IconComponent = service.icon;
             return (
               <div
@@ -107,7 +60,6 @@ export default function Services() {
             <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
           </div>
         </div>
-
       </div>
     </div>
   );

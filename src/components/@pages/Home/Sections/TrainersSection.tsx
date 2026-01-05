@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+import SectionHeader from "@/components/@common/SectionHeader";
 import { TRAINERS } from "@/constants";
 
 export default function TrainersSection() {
@@ -13,27 +14,19 @@ export default function TrainersSection() {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
       <div className="max-w-7xl mx-auto w-full">
-
-        {/* Section Header */}
-        <div className="mb-16 space-y-8">
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-400 font-medium text-sm uppercase tracking-wider">
-              Meet Our Team
-            </span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
-            EXPERT TRAINERS
-            <br />
-            <span className="text-brand-orange">DEDICATED</span>
-            <br />
-            TO YOUR SUCCESS
-          </h2>
-
-          <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
-            Our certified trainers bring years of experience and passion to help you achieve your fitness goals with personalized guidance and support.
-          </p>
-        </div>
+        <SectionHeader
+          tag="Meet Our Team"
+          title={
+            <>
+              EXPERT TRAINERS
+              <br />
+              <span>DEDICATED</span>
+              <br />
+              TO YOUR SUCCESS
+            </>
+          }
+          description="Our certified trainers bring years of experience and passion to help you achieve your fitness goals with personalized guidance and support."
+        />
 
         {/* Horizontal Scrolling Container */}
         <div className="relative">
@@ -44,24 +37,26 @@ export default function TrainersSection() {
                   key={trainer.id}
                   className="relative w-80 h-96 cursor-pointer group"
                   onClick={() => handleCardClick(trainer.id)}
-                  style={{ perspective: '1000px' }}
+                  style={{ perspective: "1000px" }}
                 >
                   {/* Card Container */}
                   <div
                     className={`relative w-full h-full transition-transform duration-700 ${
-                      flippedCard === trainer.id ? '' : ''
+                      flippedCard === trainer.id ? "" : ""
                     }`}
                     style={{
-                      transformStyle: 'preserve-3d',
-                      transform: flippedCard === trainer.id ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                      transformStyle: "preserve-3d",
+                      transform:
+                        flippedCard === trainer.id
+                          ? "rotateY(180deg)"
+                          : "rotateY(0deg)",
                     }}
                   >
-
                     {/* Front Side */}
                     <div
                       className="absolute inset-0 bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 transition-all duration-300"
                       style={{
-                        backfaceVisibility: 'hidden'
+                        backfaceVisibility: "hidden",
                       }}
                     >
                       {/* Image */}
@@ -71,7 +66,10 @@ export default function TrainersSection() {
                         <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
                           <div className="w-24 h-24 bg-brand-orange/20 rounded-full flex items-center justify-center">
                             <span className="text-brand-orange font-bold text-3xl">
-                              {trainer.name.split(' ').map(n => n[0]).join('')}
+                              {trainer.name
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join("")}
                             </span>
                           </div>
                         </div>
@@ -85,17 +83,18 @@ export default function TrainersSection() {
                           </h3>
 
                           <div className="flex flex-wrap gap-2">
-                            {trainer.specialties.slice(0, 2).map((specialty, index) => (
-                              <span
-                                key={index}
-                                className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full"
-                              >
-                                {specialty}
-                              </span>
-                            ))}
+                            {trainer.specialties
+                              .slice(0, 2)
+                              .map((specialty, index) => (
+                                <span
+                                  key={index}
+                                  className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full"
+                                >
+                                  {specialty}
+                                </span>
+                              ))}
                           </div>
                         </div>
-
                       </div>
                     </div>
 
@@ -103,14 +102,17 @@ export default function TrainersSection() {
                     <div
                       className="absolute inset-0 bg-black/40 backdrop-blur-sm border border-brand-orange/30 rounded-2xl p-6 flex flex-col"
                       style={{
-                        backfaceVisibility: 'hidden',
-                        transform: 'rotateY(180deg)'
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)",
                       }}
                     >
                       <div className="text-center mb-6">
                         <div className="w-20 h-20 bg-brand-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
                           <span className="text-brand-orange font-bold text-2xl">
-                            {trainer.name.split(' ').map(n => n[0]).join('')}
+                            {trainer.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")}
                           </span>
                         </div>
                         <h3 className="text-2xl font-bold text-brand-orange mb-2">
@@ -124,7 +126,9 @@ export default function TrainersSection() {
                         </p>
 
                         <div className="space-y-2">
-                          <h4 className="text-white font-semibold text-sm">Specialties:</h4>
+                          <h4 className="text-white font-semibold text-sm">
+                            Specialties:
+                          </h4>
                           <div className="flex flex-wrap gap-2">
                             {trainer.specialties.map((specialty, index) => (
                               <span
@@ -144,7 +148,6 @@ export default function TrainersSection() {
                         </span>
                       </div>
                     </div>
-
                   </div>
                 </div>
               ))}
@@ -173,7 +176,6 @@ export default function TrainersSection() {
             <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
           </div>
         </div>
-
       </div>
     </div>
   );

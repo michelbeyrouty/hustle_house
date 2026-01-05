@@ -1,6 +1,6 @@
 "use client";
 
-import {  FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 
 export default function Footer() {

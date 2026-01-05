@@ -29,8 +29,8 @@ export default function Navbar() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   const handleMouseEnter = (index: number) => {
@@ -38,7 +38,8 @@ export default function Navbar() {
     const element = navRefs.current[index];
     if (element) {
       const rect = element.getBoundingClientRect();
-      const parentRect = element.parentElement?.parentElement?.getBoundingClientRect();
+      const parentRect =
+        element.parentElement?.parentElement?.getBoundingClientRect();
       if (parentRect) {
         setBackgroundStyle({
           left: rect.left - parentRect.left,
@@ -56,13 +57,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`flex flex-row justify-between items-center w-full px-4 md:px-8 py-3 md:py-4 fixed top-0 z-50 transition-transform duration-300 ease-in-out ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
-
+    <nav
+      className={`flex flex-row justify-between items-center w-full px-4 md:px-8 py-3 md:py-4 fixed top-0 z-50 transition-transform duration-300 ease-in-out ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <HustleHouseLogo />
 
-    {/* Desktop */}
+      {/* Desktop */}
 
       <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 bg-gray-50 rounded-full px-6 py-2 shadow-sm border border-gray-200">
         <ul
@@ -72,7 +74,7 @@ export default function Navbar() {
           {/* Moving background */}
           <div
             className={`absolute bg-gradient-to-r from-brand-orange/10 to-brand-orange/20 rounded-full transition-all duration-300 ease-out ${
-              hoveredIndex !== null ? 'opacity-100 shadow-lg' : 'opacity-0'
+              hoveredIndex !== null ? "opacity-100 shadow-lg" : "opacity-0"
             }`}
             style={backgroundStyle}
           />
@@ -83,7 +85,11 @@ export default function Navbar() {
                 href={nav.link}
                 className="text-sm font-medium text-gray-600 hover:text-brand-orange transition-colors duration-300 px-3 py-2 rounded-full relative z-10 block"
                 target={nav.link.startsWith("http") ? "_blank" : undefined}
-                rel={nav.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  nav.link.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
                 onMouseEnter={() => handleMouseEnter(index)}
               >
                 {nav.title}
@@ -97,8 +103,16 @@ export default function Navbar() {
         <Button
           variant="brand"
           href={NAV_LINKS[NAV_LINKS.length - 1].link}
-          target={NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http") ? "_blank" : undefined}
-          rel={NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http") ? "noopener noreferrer" : undefined}
+          target={
+            NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http")
+              ? "_blank"
+              : undefined
+          }
+          rel={
+            NAV_LINKS[NAV_LINKS.length - 1].link.startsWith("http")
+              ? "noopener noreferrer"
+              : undefined
+          }
         >
           {NAV_LINKS[NAV_LINKS.length - 1].title}
         </Button>

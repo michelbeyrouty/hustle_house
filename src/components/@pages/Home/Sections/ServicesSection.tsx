@@ -1,6 +1,7 @@
 "use client";
 
 import { SERVICES } from "@/constants";
+import SectionHeader from "@/components/@common/SectionHeader";
 
 export default function ServicesSection() {
 
@@ -8,27 +9,19 @@ export default function ServicesSection() {
     <div className="min-h-screen bg-gray-950 text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
       <div className="max-w-7xl mx-auto w-full">
 
-        {/* Section Header */}
-        <div className="mb-16 space-y-8">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-px bg-brand-orange"></div>
-            <span className="text-brand-orange font-medium text-sm uppercase tracking-wider">
-              Our Services
-            </span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
-            EVERYTHING YOU
-            <br />
-            NEED TO
-            <br />
-            SUCCEED
-          </h2>
-
-          <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
-            From personalized training to expert guidance, we provide comprehensive services to support your fitness journey.
-          </p>
-        </div>
+        <SectionHeader
+          tag="Our Services"
+          title={
+            <>
+              EVERYTHING YOU
+              <br />
+              <span >NEED TO</span>
+              <br />
+              SUCCEED
+            </>
+          }
+          description="From personalized training to expert guidance, we provide comprehensive services to support your fitness journey."
+        />
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

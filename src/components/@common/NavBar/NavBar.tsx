@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import HustleHouseLogo from "@/components/@common/NavBar/Logo";
 import Button from "@/components/@common/Buttons/Button";
 import { HiMenu, HiX } from "react-icons/hi";

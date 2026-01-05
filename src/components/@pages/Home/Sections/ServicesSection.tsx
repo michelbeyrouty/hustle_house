@@ -6,7 +6,10 @@ import CinematicBackground from "@/components/@common/CinematicBackground";
 
 export default function ServicesSection() {
   return (
-    <div className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
+    <div
+      id="services"
+      className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20"
+    >
       {/* Cinematic Background with gym interior */}
       <CinematicBackground
         imageUrl="/test_1.jpg"

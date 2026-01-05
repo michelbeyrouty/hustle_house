@@ -27,7 +27,10 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
+    <div
+      id="contact"
+      className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20"
+    >
       {/* Cinematic Background */}
       <CinematicBackground
         imageUrl="/gym_exterior.jpg"

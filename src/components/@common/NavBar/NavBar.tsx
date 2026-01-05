@@ -81,7 +81,6 @@ export default function Navbar() {
           {NAV_LINKS.slice(0, -1).map((nav, index) => (
             <li key={nav.link} className="flex-shrink-0">
               <a
-                ref={(el) => (navRefs.current[index] = el)}
                 href={nav.link}
                 className="text-sm font-medium text-gray-600 hover:text-brand-orange transition-colors duration-300 px-3 py-2 rounded-full relative z-10 block"
                 target={nav.link.startsWith("http") ? "_blank" : undefined}

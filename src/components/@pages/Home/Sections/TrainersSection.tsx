@@ -13,7 +13,10 @@ export default function TrainersSection() {
   };
 
   return (
-    <div className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20">
+    <div
+      id="trainers"
+      className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20"
+    >
       {/* Cinematic Background with motivational imagery */}
       <CinematicBackground
         imageUrl="/gym_interior_lifting.jpg"

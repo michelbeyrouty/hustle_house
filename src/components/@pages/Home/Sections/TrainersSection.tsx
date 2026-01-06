@@ -20,7 +20,7 @@ export default function TrainersSection() {
       {/* Cinematic Background with motivational imagery */}
       <CinematicBackground
         imageUrl="/gym_interior_lifting.jpg"
-        brightness={0.5}
+        brightness={1}
         contrast={1.4}
       />
 
@@ -171,14 +171,12 @@ export default function TrainersSection() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="flex justify-center mt-6">
-            <div className="flex space-x-2">
-              {TRAINERS.map((_, index) => (
-                <div
-                  key={index}
-                  className="w-2 h-2 bg-white/20 rounded-full"
-                ></div>
-              ))}
+          <div className="flex justify-center mt-8">
+            <div className="flex items-center space-x-3 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
+              <span className="text-sm text-gray-400 mr-2">
+                Scroll to explore
+              </span>
+              <span className="text-sm text-gray-400 ml-2">←→</span>
             </div>
           </div>
         </div>

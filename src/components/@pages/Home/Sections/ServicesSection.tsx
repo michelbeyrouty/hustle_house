@@ -12,7 +12,7 @@ export default function ServicesSection() {
     >
       {/* Cinematic Background with gym interior */}
       <CinematicBackground
-        imageUrl="/test_1.jpg"
+        imageUrl="/gym_interior_main.jpg"
         brightness={0.6}
         contrast={1.3}
       />

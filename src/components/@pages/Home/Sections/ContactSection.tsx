@@ -2,7 +2,7 @@
 
 import SectionHeader from "@/components/@common/SectionHeader";
 import CinematicBackground from "@/components/@common/CinematicBackground";
-import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -25,7 +25,7 @@ export default function ContactSection() {
             <>
               READY TO START
               <br />
-              <span className="text-brand-orange">YOUR</span>
+              <span>YOUR</span>
               <br />
               FITNESS JOURNEY?
             </>
@@ -89,13 +89,9 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-xl font-bold text-white group-hover:text-brand-orange transition-colors duration-300 mb-3 flex items-center gap-2">
                   Visit Us
-                  <ExternalLink className="w-4 h-4 opacity-70" />
                 </h3>
                 <p className="text-gray-300 group-hover:text-brand-orange transition-colors duration-300 text-lg">
                   Sehayleh - Keserwan
-                </p>
-                <p className="text-sm text-gray-400 group-hover:text-brand-orange/70 transition-colors duration-300 mt-2">
-                  Click to open in maps
                 </p>
               </div>
             </div>

@@ -46,7 +46,6 @@ export default function TrainersSection() {
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
-              WebkitScrollbar: "none",
             }}
           >
             <div className="flex space-x-6 min-w-max px-2">
@@ -79,7 +78,7 @@ export default function TrainersSection() {
                     >
                       {/* Image */}
                       <div className="relative h-2/3 bg-gray-800 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10"></div>
                         {/* Trainer image */}
                         <Image
                           src={trainer.image}
@@ -97,7 +96,7 @@ export default function TrainersSection() {
                         />
                         {/* Fallback when image fails to load */}
                         <div
-                          className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 items-center justify-center"
+                          className="w-full h-full bg-linear-to-br from-gray-700 to-gray-800 items-center justify-center"
                           style={{ display: "none" }}
                         >
                           <div className="w-20 h-20 bg-brand-orange/20 rounded-full flex items-center justify-center">

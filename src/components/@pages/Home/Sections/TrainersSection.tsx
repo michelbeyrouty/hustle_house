@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SectionHeader from "@/components/@common/SectionHeader";
 import CinematicBackground from "@/components/@common/CinematicBackground";
 import { TRAINERS } from "@/constants";
@@ -17,14 +18,12 @@ export default function TrainersSection() {
       id="trainers"
       className="relative min-h-screen text-white flex items-center px-6 md:px-12 lg:px-20 py-20"
     >
-      {/* Cinematic Background with motivational imagery */}
       <CinematicBackground
         imageUrl="/gym_interior_lifting.jpg"
         brightness={1}
         contrast={1.4}
       />
 
-      {/* Content overlay */}
       <div className="relative z-20 max-w-7xl mx-auto w-full">
         <SectionHeader
           tag="Meet Our Team"
@@ -41,13 +40,20 @@ export default function TrainersSection() {
         />
 
         {/* Horizontal Scrolling Container */}
-        <div className="relative max-h-[700px] overflow-hidden">
-          <div className="overflow-x-auto overflow-y-hidden pb-6">
+        <div className="relative max-h-175 overflow-hidden">
+          <div
+            className="overflow-x-auto overflow-y-hidden pb-6"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              WebkitScrollbar: "none",
+            }}
+          >
             <div className="flex space-x-6 min-w-max px-2">
               {TRAINERS.map((trainer) => (
                 <div
                   key={trainer.id}
-                  className="relative w-80 h-[28rem] cursor-pointer group flex-shrink-0"
+                  className="relative w-80 h-112 cursor-pointer group shrink-0"
                   onClick={() => handleCardClick(trainer.id)}
                   style={{ perspective: "1000px" }}
                 >
@@ -74,8 +80,26 @@ export default function TrainersSection() {
                       {/* Image */}
                       <div className="relative h-2/3 bg-gray-800 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                        {/* Placeholder for trainer image */}
-                        <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                        {/* Trainer image */}
+                        <Image
+                          src={trainer.image}
+                          alt={trainer.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = "none";
+                            const fallback =
+                              target.nextElementSibling as HTMLElement;
+                            if (fallback) fallback.style.display = "flex";
+                          }}
+                        />
+                        {/* Fallback when image fails to load */}
+                        <div
+                          className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 items-center justify-center"
+                          style={{ display: "none" }}
+                        >
                           <div className="w-20 h-20 bg-brand-orange/20 rounded-full flex items-center justify-center">
                             <span className="text-brand-orange font-bold text-2xl">
                               {trainer.name
@@ -120,13 +144,33 @@ export default function TrainersSection() {
                       }}
                     >
                       <div className="text-center mb-4">
-                        <div className="w-16 h-16 bg-brand-orange/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <span className="text-brand-orange font-bold text-lg">
-                            {trainer.name
-                              .split(" ")
-                              .map((n) => n[0])
-                              .join("")}
-                          </span>
+                        <div className="relative w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brand-orange/50">
+                          <Image
+                            src={trainer.image}
+                            alt={trainer.name}
+                            fill
+                            className="object-cover"
+                            sizes="64px"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = "none";
+                              const fallback =
+                                target.nextElementSibling as HTMLElement;
+                              if (fallback) fallback.style.display = "flex";
+                            }}
+                          />
+                          {/* Fallback when image fails to load */}
+                          <div
+                            className="w-full h-full bg-brand-orange/20 items-center justify-center"
+                            style={{ display: "none" }}
+                          >
+                            <span className="text-brand-orange font-bold text-sm">
+                              {trainer.name
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join("")}
+                            </span>
+                          </div>
                         </div>
                         <h3 className="text-lg font-bold text-brand-orange mb-2">
                           {trainer.name}
@@ -156,12 +200,6 @@ export default function TrainersSection() {
                               ))}
                           </div>
                         </div>
-                      </div>
-
-                      <div className="text-center mt-4 pt-4 border-t border-white/10">
-                        <span className="text-xs text-gray-400">
-                          Click to flip back
-                        </span>
                       </div>
                     </div>
                   </div>

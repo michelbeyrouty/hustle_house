@@ -116,20 +116,6 @@ export default function TrainersSection() {
                           <h3 className="text-xl font-bold text-white group-hover:text-brand-orange transition-colors duration-300">
                             {trainer.name}
                           </h3>
-
-                          <div className="flex flex-wrap gap-2">
-                            {trainer.specialties &&
-                              trainer.specialties
-                                .slice(0, 2)
-                                .map((specialty, index) => (
-                                  <span
-                                    key={index}
-                                    className="text-sm px-3 py-1 bg-white/20 text-white rounded-full border border-white/20"
-                                  >
-                                    {specialty}
-                                  </span>
-                                ))}
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -181,23 +167,6 @@ export default function TrainersSection() {
                           <p className="text-gray-300 text-sm leading-relaxed">
                             {trainer.description}
                           </p>
-                        </div>
-
-                        <div className="space-y-3">
-                          <h4 className="text-white font-semibold text-sm border-b border-brand-orange/20 pb-1">
-                            Specialties:
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {trainer.specialties &&
-                              trainer.specialties.map((specialty, index) => (
-                                <span
-                                  key={index}
-                                  className="text-sm px-3 py-1 bg-brand-orange/30 text-brand-orange rounded-full border border-brand-orange/50"
-                                >
-                                  {specialty}
-                                </span>
-                              ))}
-                          </div>
                         </div>
                       </div>
                     </div>

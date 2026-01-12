@@ -9,7 +9,7 @@ interface CinematicBackgroundProps {
 
 export default function CinematicBackground({
   className = "",
-  imageUrl = "/hero_background.png",
+  imageUrl = "/gym_interior_lifting.jpg",
   brightness = 0.8,
   contrast = 1.1,
 }: CinematicBackgroundProps) {

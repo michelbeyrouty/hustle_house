@@ -17,5 +17,4 @@ export interface Trainer {
   name: string;
   image: string;
   description: string;
-  specialties: string[];
 }

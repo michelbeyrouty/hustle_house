@@ -16,5 +16,6 @@ export interface Trainer {
   id: number;
   name: string;
   image: string;
+  backImage?: string;
   description: string;
 }

@@ -76,16 +76,17 @@ export default function TrainersSection() {
                         backfaceVisibility: "hidden",
                       }}
                     >
-                      {/* Image */}
+                      {/* Front Image - Better centered */}
                       <div className="relative h-2/3 bg-gray-800 overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10"></div>
-                        {/* Trainer image */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                         <Image
                           src={trainer.image}
                           alt={trainer.name}
                           fill
                           className="object-cover"
+                          style={{ objectPosition: "center 20%" }}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={trainer.id <= 3}
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = "none";
@@ -96,7 +97,7 @@ export default function TrainersSection() {
                         />
                         {/* Fallback when image fails to load */}
                         <div
-                          className="w-full h-full bg-linear-to-br from-gray-700 to-gray-800 items-center justify-center"
+                          className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 items-center justify-center"
                           style={{ display: "none" }}
                         >
                           <div className="w-20 h-20 bg-brand-orange/20 rounded-full flex items-center justify-center">
@@ -122,51 +123,55 @@ export default function TrainersSection() {
 
                     {/* Back Side */}
                     <div
-                      className="absolute inset-0 bg-black/40 backdrop-blur-sm border border-brand-orange/30 rounded-2xl p-6 flex flex-col"
+                      className="absolute inset-0 bg-black/40 backdrop-blur-sm border border-brand-orange/30 rounded-2xl overflow-hidden"
                       style={{
                         backfaceVisibility: "hidden",
                         transform: "rotateY(180deg)",
                       }}
                     >
-                      <div className="text-center mb-4">
-                        <div className="relative w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brand-orange/50">
-                          <Image
-                            src={trainer.image}
-                            alt={trainer.name}
-                            fill
-                            className="object-cover"
-                            sizes="64px"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = "none";
-                              const fallback =
-                                target.nextElementSibling as HTMLElement;
-                              if (fallback) fallback.style.display = "flex";
-                            }}
-                          />
-                          {/* Fallback when image fails to load */}
-                          <div
-                            className="w-full h-full bg-brand-orange/20 items-center justify-center"
-                            style={{ display: "none" }}
-                          >
-                            <span className="text-brand-orange font-bold text-sm">
-                              {trainer.name
-                                .split(" ")
-                                .map((n) => n[0])
-                                .join("")}
-                            </span>
+                      {/* Back Content - Original overlay design */}
+                      <div className="absolute inset-0 z-20 p-6 flex flex-col justify-between">
+                        <div className="text-center">
+                          <div className="relative w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brand-orange/50">
+                            <Image
+                              src={trainer.backImage || trainer.image}
+                              alt={trainer.name}
+                              fill
+                              className="object-cover"
+                              style={{ objectPosition: "center 20%" }}
+                              sizes="64px"
+                              onError={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = "none";
+                                const fallback =
+                                  target.nextElementSibling as HTMLElement;
+                                if (fallback) fallback.style.display = "flex";
+                              }}
+                            />
+                            {/* Fallback when image fails to load */}
+                            <div
+                              className="w-full h-full bg-brand-orange/20 items-center justify-center"
+                              style={{ display: "none" }}
+                            >
+                              <span className="text-brand-orange font-bold text-sm">
+                                {trainer.name
+                                  .split(" ")
+                                  .map((n) => n[0])
+                                  .join("")}
+                              </span>
+                            </div>
                           </div>
+                          <h3 className="text-lg font-bold text-brand-orange mb-2">
+                            {trainer.name}
+                          </h3>
                         </div>
-                        <h3 className="text-lg font-bold text-brand-orange mb-2">
-                          {trainer.name}
-                        </h3>
-                      </div>
 
-                      <div className="flex-1 space-y-4">
-                        <div className="space-y-3">
-                          <p className="text-gray-300 text-sm leading-relaxed">
-                            {trainer.description}
-                          </p>
+                        <div className="flex-1 space-y-4">
+                          <div className="space-y-3">
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                              {trainer.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>

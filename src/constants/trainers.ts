@@ -73,12 +73,12 @@ export const TRAINERS: Trainer[] = [
     description:
       "Football player and goalkeeper coach with a B.A. in Physical Education and Sports. She currently represents Nejmeh SC Women's Team and the Lebanese Women's National Team as a goalkeeper. With an AFC C Diploma, she specializes in physical conditioning, functional training, and overall fitness for individuals of all ages and levels. Her approach prioritizes safe, effective movement, strength development, and mobility.",
   },
-  {
-    id: 10,
-    name: "Karen G. Azzi",
-    // image: "/trainers/kerena.webp",
-    // backImage: "/trainers/kerena_back.webp",
-    description:
-      "Registered dietitian with a Bachelor's degree in Nutrition and Dietetics and over four years of experience in clinical and fitness settings. A member of the Lebanese Order of Dietitians, she works with athletes, active individuals, and gym members to support performance, recovery, hormonal balance, and sustainable weight management through personalized, evidence-based nutrition strategies.",
-  },
+  // {
+  //   id: 10,
+  //   name: "Karen G. Azzi",
+  //   image: "",
+  //   backImage: "",
+  //   description:
+  //     "Registered dietitian with a Bachelor's degree in Nutrition and Dietetics and over four years of experience in clinical and fitness settings. A member of the Lebanese Order of Dietitians, she works with athletes, active individuals, and gym members to support performance, recovery, hormonal balance, and sustainable weight management through personalized, evidence-based nutrition strategies.",
+  // },
 ];

@@ -1,12 +1,10 @@
+import { HiUser, HiUserGroup } from "react-icons/hi";
+import { TbStretching, TbMedicalCross, TbApple } from "react-icons/tb";
 import {
-  HiUser,
-  HiUserGroup,
-  HiHeart,
-  HiAcademicCap,
-  HiBeaker,
-  HiClipboardList,
-  HiSparkles,
-} from "react-icons/hi";
+  MdOutlineSportsGymnastics,
+  MdOutlineFitnessCenter,
+} from "react-icons/md";
+
 import { Service } from "@/types";
 
 export const SERVICES: Service[] = [
@@ -23,31 +21,31 @@ export const SERVICES: Service[] = [
       "Dynamic group sessions that combine motivation with effective workouts.",
   },
   {
-    icon: HiHeart,
+    icon: MdOutlineFitnessCenter,
     title: "Athlete Rehabilitation & Training",
     description:
       "Specialized programs for athlete recovery and performance enhancement.",
   },
   {
-    icon: HiAcademicCap,
+    icon: TbStretching,
     title: "Classes",
     description:
       "Structured fitness classes designed for all fitness levels and interests.",
   },
   {
-    icon: HiBeaker,
+    icon: TbMedicalCross,
     title: "Physiotherapy",
     description:
       "Professional physiotherapy services to help you recover and prevent injuries.",
   },
   {
-    icon: HiClipboardList,
+    icon: TbApple,
     title: "Dietitian",
     description:
       "Expert nutritional guidance to complement your fitness journey.",
   },
   {
-    icon: HiSparkles,
+    icon: MdOutlineSportsGymnastics,
     title: "Pilates",
     description:
       "Core-strengthening Pilates sessions for improved flexibility and balance.",

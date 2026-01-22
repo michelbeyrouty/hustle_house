@@ -134,7 +134,7 @@ export default function TrainersSection() {
                         <div className="text-center">
                           <div className="relative w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-brand-orange/50">
                             <Image
-                              src={trainer.backImage || trainer.image}
+                              src={trainer.backImage && trainer.backImage.trim() !== "" ? trainer.backImage : trainer.image}
                               alt={trainer.name}
                               fill
                               className="object-cover"

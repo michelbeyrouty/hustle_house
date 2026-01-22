@@ -10,9 +10,22 @@ export default function Footer() {
     <footer className="bg-black/50 backdrop-blur-sm border-t border-white/10 py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Copyright */}
-        <p className="text-white/60 text-sm">
-          © {currentYear} Hustle House. All rights reserved.
-        </p>
+        <div className="flex flex-col items-center md:items-start gap-1">
+          <p className="text-white/60 text-sm">
+            © {currentYear} Hustle House. All rights reserved.
+          </p>
+          <p className="text-white/40 text-xs">
+            Developed by{" "}
+            <a
+              href="https://michelbeyrouty.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-orange/60 transition-colors duration-300"
+            >
+              Michel Beyrouty
+            </a>
+          </p>
+        </div>
 
         {/* Social Links */}
         <div className="flex items-center space-x-6">

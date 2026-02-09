@@ -73,12 +73,36 @@ export const TRAINERS: Trainer[] = [
     description:
       "Football player and goalkeeper coach with a B.A. in Physical Education and Sports. She currently represents Nejmeh SC Women's Team and the Lebanese Women's National Team as a goalkeeper. With an AFC C Diploma, she specializes in physical conditioning, functional training, and overall fitness for individuals of all ages and levels. Her approach prioritizes safe, effective movement, strength development, and mobility.",
   },
-  // {
-  //   id: 10,
-  //   name: "Karen G. Azzi",
-  //   image: "",
-  //   backImage: "",
-  //   description:
-  //     "Registered dietitian with a Bachelor's degree in Nutrition and Dietetics and over four years of experience in clinical and fitness settings. A member of the Lebanese Order of Dietitians, she works with athletes, active individuals, and gym members to support performance, recovery, hormonal balance, and sustainable weight management through personalized, evidence-based nutrition strategies.",
-  // },
+  {
+    id: 10,
+    name: "Jonathan Khalil",
+    image: "/trainers/jonathan.webp",
+    backImage: "/trainers/jonathan.webp",
+    description:
+      "Strength and conditioning coach with a BA in Physical Education, specializing in sports injuries and rehabilitation. He works with the Beirut Women's Division 1 team and Lebanon Boys U18 National Team. Jonathan combines coaching experience with a scientific approach, using performance technologies like Kinevent, VALD, and Catapult to optimize athlete performance and recovery. A former CrossFit athlete who competed internationally, he specializes in Olympic weightlifting.",
+  },
+  {
+    id: 11,
+    name: "Jude Hantouch",
+    image: "/trainers/jude.webp",
+    backImage: "/trainers/jude_back.webp",
+    description:
+      "Certified trainer with a Bachelor's degree in Physical Education and a Master's in High Performance and Conditioning, specializing in rehabilitation, bodybuilding, and strength and conditioning for multi-sport athletes. He helps athletes and fitness enthusiasts build strength, improve performance, and reduce injury risk through personalized, science-based training. His approach focuses on gradual progression, movement quality, long-term development and health.",
+  },
+  {
+    id: 12,
+    name: "Maria Ghaleb",
+    image: "/trainers/maria.webp",
+    backImage: "/trainers/maria.webp",
+    description:
+      "Athletic Trainer from Wayland Baptist University and professional basketball player for the Lebanese National Team and Riyadi Club. Experienced in therapeutic modalities with exceptional attention to detail. Using her experience as an athlete and high-level education, Maria's programs are grounded in exercise science and tailored to the specific demands of each sport, focusing on improving force production, explosiveness, agility, and resilience.",
+  },
+  {
+    id: 13,
+    name: "Karen G. Azzi",
+    image: "/trainers/karen.webp",
+    backImage: "/trainers/karen.webp",
+    description:
+      "Registered dietitian with a Bachelor's degree in Nutrition and Dietetics and over four years of experience in clinical and fitness settings. A member of the Lebanese Order of Dietitians, she works with athletes, active individuals, and gym members to support performance, recovery, hormonal balance, and sustainable weight management through personalized, evidence-based nutrition strategies.",
+  },
 ];

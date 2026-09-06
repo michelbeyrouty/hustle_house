@@ -37,7 +37,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {/* Phone */}
           <a
-            href="tel:+96170514564"
+            href="tel:+96170514764"
             className="group bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-brand-orange/50 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer block"
           >
             <div className="space-y-6">

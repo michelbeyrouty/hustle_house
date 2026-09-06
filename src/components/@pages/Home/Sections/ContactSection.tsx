@@ -49,7 +49,7 @@ export default function ContactSection() {
                   Call Us
                 </h3>
                 <p className="text-gray-300 group-hover:text-brand-orange transition-colors duration-300 text-lg">
-                  +961 70 514 564
+                  +961 70 514 764
                 </p>
               </div>
             </div>
